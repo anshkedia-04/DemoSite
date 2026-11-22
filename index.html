@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansh Kedia — Developer Portfolio</title>
+  <meta name="description" content="Websites and software solutions that bring ideas to life. A showcase of modern, fast, and responsive demo websites and systems built for business growth.">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <!-- Monogram Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="Ansh Kedia Home">
+        <span class="brand-monogram">AK</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="nav-actions">
+        <button type="button" class="btn-quote-nav" onclick="openQuoteModal()">
+          <span>Get a Quote</span>
+          <span class="arrow-icon" aria-hidden="true">↗</span>
+        </button>
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#services" class="mobile-nav-link">Services</a>
+      <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <button type="button" class="btn-primary-dark" style="margin-top:0.5rem; justify-content:center;" onclick="openQuoteModal(); document.getElementById('mobileNavDrawer').classList.remove('open');">
+        Get a Quote ↗
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <!-- Hero Text & Left Column -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="dash-line" aria-hidden="true"></span>
+            <span>WEB DESIGN PORTFOLIO</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span>Websites That</span>
+            <span>Bring Ideas to Life</span>
+          </h1>
+
+          <p class="hero-description">
+            I design and build modern, fast and responsive websites that help businesses look professional, attract customers and grow online.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-primary-dark">
+              <span>Explore Projects</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <button type="button" class="btn-secondary-outline" onclick="openQuoteModal()">
+              <span>Get in Touch</span>
+            </button>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Demo Websites</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Website Templates</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Responsive &amp; Modern</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Workspace Image (Right Column) -->
+        <div class="hero-media-wrapper">
+          <div class="hero-image-container">
+            <img 
+              src="assets/images/hero-desk.png" 
+              alt="Apple Studio Display desktop setup featuring Ansh Kedia branding"
+              width="736" 
+              height="906"
+              loading="eager"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================================
+         SELECTED WORK / DEMO WEBSITES SECTION
+         ======================================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-eyebrow">SELECTED WORK</div>
+          <h2 class="section-title">Demo Websites</h2>
+          <p class="section-subtitle">
+            A showcase of website designs and builds for different business needs.
+          </p>
+        </div>
+
+        <!-- Filter Tabs (Seamless filtering when you add more demo websites) -->
+        <div class="filter-tabs-container" role="tablist" aria-label="Demo category filters">
+          <button type="button" class="filter-tab active" data-category="all" role="tab">All Projects</button>
+          <button type="button" class="filter-tab" data-category="E-Commerce" role="tab">E-Commerce</button>
+          <button type="button" class="filter-tab" data-category="Furniture" role="tab">Furniture &amp; Living</button>
+          <button type="button" class="filter-tab" data-category="Restaurant" role="tab">Restaurant &amp; Café</button>
+          <button type="button" class="filter-tab" data-category="Bakery" role="tab">Bakery</button>
+          <button type="button" class="filter-tab" data-category="ERP" role="tab">Restaurant ERP</button>
+        </div>
+
+        <!-- Projects Grid (Dynamically rendered from js/projects-data.js) -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Fallback initial static cards matching live websites pixel-perfectly -->
+          <div class="project-card" data-id="sarohans-couture">
+            <div class="card-thumbnail-wrap">
+              <img src="assets/images/card-sarohans.png" alt="Sarohans website preview" loading="lazy">
+              <div class="card-hover-overlay">
+                <span class="preview-pill">Explore Demo ↗</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <h3 class="card-title">Sarohans</h3>
+                <a href="https://sarohans-cr8o.onrender.com" target="_blank" rel="noopener noreferrer" class="card-arrow-icon" title="Open live demo in new tab" aria-label="Open Sarohans in new tab">↗</a>
+              </div>
+              <p class="card-description">A luxury royal heritage ethnic wear e-commerce experience featuring handcrafted artisanal fashion, curated menswear, and bridal couture.</p>
+              <div class="card-tags">
+                <span class="tag-badge">E-Commerce</span>
+                <span class="tag-badge">Luxury Fashion</span>
+                <span class="tag-badge">Ethnic Wear</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-id="commune-atelier">
+            <div class="card-thumbnail-wrap">
+              <img src="assets/images/card-commune-atelier.png" alt="Commune Atelier website preview" loading="lazy">
+              <div class="card-hover-overlay">
+                <span class="preview-pill">Explore Demo ↗</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <h3 class="card-title">Commune Atelier</h3>
+                <a href="https://commune-atelier.onrender.com" target="_blank" rel="noopener noreferrer" class="card-arrow-icon" title="Open live demo in new tab" aria-label="Open Commune Atelier in new tab">↗</a>
+              </div>
+              <p class="card-description">A luxury digital showroom for bespoke furniture, architectural woodworking, and curated living spaces.</p>
+              <div class="card-tags">
+                <span class="tag-badge">Furniture</span>
+                <span class="tag-badge">Bespoke Living</span>
+                <span class="tag-badge">Showroom</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-id="ember-and-ivory">
+            <div class="card-thumbnail-wrap">
+              <img src="assets/images/card-ember-ivory.png" alt="Ember & Ivory website preview" loading="lazy">
+              <div class="card-hover-overlay">
+                <span class="preview-pill">Explore Demo ↗</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <h3 class="card-title">Ember &amp; Ivory</h3>
+                <a href="https://ember-and-ivory.onrender.com" target="_blank" rel="noopener noreferrer" class="card-arrow-icon" title="Open live demo in new tab" aria-label="Open Ember &amp; Ivory in new tab">↗</a>
+              </div>
+              <p class="card-description">A contemporary luxury restaurant and cocktail lounge website with digital menu, ambience gallery, and table bookings.</p>
+              <div class="card-tags">
+                <span class="tag-badge">Restaurant</span>
+                <span class="tag-badge">Fine Dining</span>
+                <span class="tag-badge">Reservations</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-id="cake-connection">
+            <div class="card-thumbnail-wrap">
+              <img src="assets/images/card-cake-connection.png" alt="Cake Connection website preview" loading="lazy">
+              <div class="card-hover-overlay">
+                <span class="preview-pill">Explore Demo ↗</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <h3 class="card-title">Cake Connection</h3>
+                <a href="https://cake-connection.onrender.com" target="_blank" rel="noopener noreferrer" class="card-arrow-icon" title="Open live demo in new tab" aria-label="Open Cake Connection in new tab">↗</a>
+              </div>
+              <p class="card-description">An artisanal live bakery e-commerce platform offering 100% pure eggless cakes, custom orders, and 2-hour express delivery.</p>
+              <div class="card-tags">
+                <span class="tag-badge">Bakery</span>
+                <span class="tag-badge">E-Commerce</span>
+                <span class="tag-badge">Online Ordering</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-id="flavourfall-erp">
+            <div class="card-thumbnail-wrap">
+              <img src="assets/images/card-flavourfall.png" alt="ERP for Restaurants preview" loading="lazy">
+              <div class="card-hover-overlay">
+                <span class="preview-pill">Explore Demo ↗</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="card-title-row">
+                <h3 class="card-title">ERP for Restaurants</h3>
+                <a href="https://flavourfall.onrender.com/" target="_blank" rel="noopener noreferrer" class="card-arrow-icon" title="Open live demo in new tab" aria-label="Open ERP for Restaurants in new tab">↗</a>
+              </div>
+              <p class="card-description">A comprehensive restaurant management ERP featuring live order pipelines, kitchen display (KDS), inventory control, and real-time revenue analytics.</p>
+              <div class="card-tags">
+                <span class="tag-badge">Restaurant ERP</span>
+                <span class="tag-badge">Dashboard</span>
+                <span class="tag-badge">Management System</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================================
+         WHAT I OFFER / MY SERVICES SECTION
+         ======================================================================= -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-eyebrow">WHAT I OFFER</div>
+          <h2 class="section-title">My Services</h2>
+          <p class="section-subtitle">
+            End-to-end technical solutions and scalable development, tailored to your goals.
+          </p>
+        </div>
+
+        <!-- 4 Columns Services Grid with Vertical Dividers -->
+        <div class="services-grid-wrapper">
+          <div class="services-grid">
+            <!-- Service 1: Website Development -->
+            <div class="service-column">
+              <div class="service-icon-box" aria-hidden="true">
+                <!-- Code icon </> -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Website Development</h3>
+              <p class="service-description">Modern, fast, responsive and scalable websites.</p>
+            </div>
+
+            <!-- Service 2: Mobile App Development -->
+            <div class="service-column">
+              <div class="service-icon-box" aria-hidden="true">
+                <!-- Mobile Phone icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">Mobile App Development</h3>
+              <p class="service-description">Intuitive, cross-platform apps with fluid UX.</p>
+            </div>
+
+            <!-- Service 3: ERP System -->
+            <div class="service-column">
+              <div class="service-icon-box" aria-hidden="true">
+                <!-- ERP Dashboard / System icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                  <line x1="7" y1="8" x2="17" y2="8"></line>
+                  <line x1="7" y1="12" x2="13" y2="12"></line>
+                </svg>
+              </div>
+              <h3 class="service-title">ERP System</h3>
+              <p class="service-description">Tailored enterprise management and workflow automation.</p>
+            </div>
+
+            <!-- Service 4: Marketing Assistance -->
+            <div class="service-column">
+              <div class="service-icon-box" aria-hidden="true">
+                <!-- Marketing Growth Trending Up icon -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-title">Marketing Assistance</h3>
+              <p class="service-description">Data-driven growth strategies, SEO and lead care.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================================
+         CLIENT FEEDBACK / WHAT CLIENTS SAY SECTION
+         ======================================================================= -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-eyebrow">CLIENT FEEDBACK</div>
+          <h2 class="section-title">What Clients Say</h2>
+          <p class="section-subtitle">
+            Real feedback from people I've worked with.
+          </p>
+        </div>
+
+        <!-- 3 Testimonials Grid -->
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon" aria-hidden="true">“</div>
+            <p class="testimonial-text">
+              "The website looks amazing – clean, modern and exactly what I had in mind. Communication was smooth throughout."
+            </p>
+            <div class="testimonial-author-row">
+              <div class="testimonial-meta">
+                <span class="author-name">Ritika Sharma</span>
+                <span class="author-role">Café Owner</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon" aria-hidden="true">“</div>
+            <p class="testimonial-text">
+              "A highly professional experience. The site is fast, responsive and has really improved our online presence."
+            </p>
+            <div class="testimonial-author-row">
+              <div class="testimonial-meta">
+                <span class="author-name">Aman Desai</span>
+                <span class="author-role">Travel Business</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon" aria-hidden="true">“</div>
+            <p class="testimonial-text">
+              "Great design sense and attention to detail. Delivered on time and was open to all our suggestions."
+            </p>
+            <div class="testimonial-author-row">
+              <div class="testimonial-meta">
+                <span class="author-name">Dr. Neha Mehta</span>
+                <span class="author-role">Clinic Director</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================================
+         CALL TO ACTION BANNER (Dark Mountain Vista Background)
+         ======================================================================= -->
+    <section class="cta-banner-section" id="ctaBanner">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-eyebrow">LET'S BUILD TOGETHER</div>
+          <h2 class="cta-title">Ready to Build Your Website?</h2>
+          <p class="cta-subtitle">
+            Whether it's a new website or a redesign, I can help bring your idea to life. Let's discuss your project and create something great together.
+          </p>
+          <button type="button" class="btn-cta-quote" onclick="openQuoteModal()">
+            <span>Get a Free Quote</span>
+            <span class="arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer" id="contact">
+    <div class="container footer-container">
+      <!-- Left: Monogram, Name & Title -->
+      <div class="footer-left">
+        <span class="footer-monogram" aria-hidden="true">AK</span>
+        <div class="footer-designer-info">
+          <span class="footer-name">Ansh Kedia</span>
+          <span class="footer-role">Developer</span>
+        </div>
+      </div>
+
+      <!-- Hairline divider -->
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <!-- Center: Contact Info Details -->
+      <div class="footer-center">
+        <!-- Email -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ansh.kedia.dev@gmail.com" target="_blank" rel="noopener noreferrer" class="footer-contact-item" title="Click to email Ansh Kedia via Gmail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>ansh.kedia.dev@gmail.com</span>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+918758838722" class="footer-contact-item" title="Click to call Ansh Kedia">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>+91 8758838722</span>
+        </a>
+
+        <!-- Location 1: Vadodara, Gujarat -->
+        <div class="footer-contact-item" title="Location: Vadodara, Gujarat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Vadodara, Gujarat</span>
+        </div>
+
+        <!-- Location 2: Pune, Maharashtra -->
+        <div class="footer-contact-item" title="Location: Pune, Maharashtra">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Pune, Maharashtra</span>
+        </div>
+      </div>
+
+      <!-- Hairline divider -->
+      <div class="footer-divider" aria-hidden="true"></div>
+
+      <!-- Right: Social Links -->
+      <div class="footer-right">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/ansh-kedia-249843266/" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn profile" title="Connect on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.76v8.37H6.46v-8.37M7.84 6.2a1.62 1.62 0 1 0 1.62 1.62A1.62 1.62 0 0 0 7.84 6.2z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/anshkedia_45/" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Instagram profile" title="Follow on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+
+        <!-- Email (Direct Gmail compose) -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ansh.kedia.dev@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Email via Gmail" title="Send Email via Gmail (ansh.kedia.dev@gmail.com)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================================
+       MODAL 1: PROJECT LIVE PREVIEW MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeModal('projectModal')" aria-label="Close modal">✕</button>
+      
+      <div style="border-radius:10px; overflow:hidden; margin-bottom:1.5rem; background:#F3F4F6; aspect-ratio:16/9;">
+        <img id="modalProjectImage" src="" alt="Project Preview Mockup" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.8rem; flex-wrap:wrap; gap:0.5rem;">
+        <h2 id="modalProjectTitle" style="font-family:var(--font-serif); font-size:1.8rem; font-weight:600; color:var(--text-primary);">Project Title</h2>
+        <span id="modalProjectClient" style="font-size:0.85rem; color:var(--text-muted); font-weight:500;">Client</span>
+      </div>
+
+      <div id="modalProjectTags" style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.2rem;"></div>
+
+      <p id="modalProjectDesc" style="font-size:0.95rem; line-height:1.65; color:var(--text-secondary); margin-bottom:1.5rem;">
+        Project description.
+      </p>
+
+      <div style="margin-bottom:1.8rem;">
+        <h4 style="font-size:0.92rem; font-weight:700; color:var(--text-primary); margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.05em;">Key Highlights &amp; Features</h4>
+        <ul id="modalProjectFeatures" style="list-style:none; padding:0;"></ul>
+      </div>
+
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-top:1.2rem; border-top:1px solid var(--border-light); flex-wrap:wrap;">
+        <button type="button" class="btn-secondary-outline" onclick="closeModal('projectModal')">
+          Close
+        </button>
+        <a id="modalLiveLinkBtn" href="#" class="btn-primary-dark">
+          Launch Live Demo ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       MODAL 2: "GET A QUOTE" / PROJECT INQUIRY MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" onclick="closeModal('quoteModal')" aria-label="Close modal">✕</button>
+
+      <div style="margin-bottom:1.5rem;">
+        <span style="font-size:0.78rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-muted); display:block; margin-bottom:0.3rem;">LET'S WORK TOGETHER</span>
+        <h2 id="quoteModalTitle" style="font-family:var(--font-serif); font-size:1.9rem; font-weight:600; color:var(--text-primary); margin-bottom:0.4rem;">Get a Free Quote</h2>
+        <p style="font-size:0.92rem; color:var(--text-secondary);">
+          Tell me about your project or idea. I'll get back to you with a custom proposal and estimate within 24 hours.
+        </p>
+      </div>
+
+      <form id="quoteForm">
+        <div class="form-group">
+          <label class="form-label" for="clientName">Your Name *</label>
+          <input type="text" id="clientName" class="form-input" placeholder="e.g. Rahul Sharma" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="clientEmail">Your Email *</label>
+          <input type="email" id="clientEmail" class="form-input" placeholder="e.g. rahul@company.com" required>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div class="form-group">
+            <label class="form-label" for="quoteServiceSelect">Service Needed</label>
+            <select id="quoteServiceSelect" class="form-select">
+              <option value="Website Development">Website Development</option>
+              <option value="Mobile App Development">Mobile App Development</option>
+              <option value="ERP System">ERP System</option>
+              <option value="Marketing Assistance">Marketing Assistance</option>
+              <option value="Other / Custom Software">Other / Custom Software</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="clientBudget">Estimated Budget</label>
+            <select id="clientBudget" class="form-select">
+              <option value="Flexible / Let's Discuss">Flexible / Let's Discuss</option>
+              <option value="Under ₹25,000 / $300">Under ₹25,000 / $300</option>
+              <option value="₹25,000 - ₹60,000 / $300 - $750">₹25,000 - ₹60,000 / $300 - $750</option>
+              <option value="₹60,000+ / $750+">₹60,000+ / $750+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="clientMessage">Project Details / Goals</label>
+          <textarea id="clientMessage" class="form-textarea" placeholder="Briefly describe what your business does and what kind of website or features you are looking for..." rows="3"></textarea>
+        </div>
+
+        <div class="modal-actions-row">
+          <button type="submit" class="btn-modal-submit">
+            <span>Send Project Inquiry</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          
+          <a href="https://wa.me/918758838722?text=Hi%20Ansh%2C%20I%20saw%20your%20web%20design%20portfolio%20and%20would%20like%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-direct">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.76-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.77 2.7 4.28 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z"/>
+            </svg>
+            <span>WhatsApp Quick Chat</span>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       TOAST NOTIFICATION COMPONENT
+       ========================================================================= -->
+  <div class="toast-notice" id="toastNotice" role="alert" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toastMessage">Notification message</span>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
